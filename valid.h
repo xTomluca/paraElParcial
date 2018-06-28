@@ -7,6 +7,10 @@ int getNumeroInt(int numMax, int numMin, int *numero,int intentos,int limiteVect
 int getCadenaAZ(char* texto,char* textoInstruccion,char* textoError, int limite, int intentos);
 int getAlfaNumerico(char* texto,char* textoInstruccion,char* textoError, int limite, int intentos);
 int getNumericoInt(int* num,int minNum,int maxNum,char* textoInstruccion,char* textoError, int limite, int intentos,int modo);
+int isValidFloat(char* num,int minNum,int maxNum,char* textoInstruccion,char* textoError,int modo);
+int isValidInt(char* num,int minNum,int maxNum,char* textoInstruccion,char* textoError, int modo);
+int isValidAlfaNumerico(char* texto,char* textoInstruccion,char* textoError);
+int isValidAlfa(char* texto,char* textoInstruccion,char* textoError);
 int getNumericoFloat(float* num,char* textoInstruccion,char* textoError, int limite, int intentos);
 int getNombre(char* nombre);
 int getDni(int *dni,int limite,int intentos);

@@ -186,6 +186,126 @@ int getAlfaNumerico(char* texto,char* textoInstruccion,char* textoError, int lim
     return retorno;
 }
 
+/** \brief Valida ALFANUMERICO.
+ *
+ * \param texto char* Mediante puntero paso array de char.
+ * \return int retorno [0] si se cargo el TEXTO con exito. [1] = ERROR.
+ *
+ */
+
+int isValidAlfaNumerico(char* texto,char* textoInstruccion,char* textoError)
+{
+    int i,retorno,verificacion;
+
+    if(strlen(texto)>0)
+    {
+        for(i=0;i<strlen(texto);i++)
+        {
+            if(((texto[i]>='a') && (texto[i]<='z')) || ((texto[i]>='A') && (texto[i]<='Z'))|| ((texto[i]>='0') && (texto[i]<='9')))
+            {
+                    retorno = 0;
+            }
+            else
+            {
+                    printf("\n%s\n\n",textoError);
+                    retorno = 1;
+                    break;
+            }
+        }
+    }
+    else
+    {
+        printf("\n%s\n\n",textoError);
+        retorno = 1;
+    }
+
+
+    return retorno;
+}
+
+/** \brief Valida ALFA.
+ *
+ * \param texto char* Mediante puntero paso array de char.
+ * \return int retorno [0] si se cargo el TEXTO con exito. [1] = ERROR.
+ *
+ */
+
+int isValidAlfa(char* texto,char* textoInstruccion,char* textoError)
+{
+    int i,retorno,verificacion;
+
+    if(strlen(texto)>0)
+    {
+        for(i=0;i<strlen(texto);i++)
+        {
+            if(((texto[i]>='a') && (texto[i]<='z')) || ((texto[i]>='A') && (texto[i]<='Z')))
+            {
+                    retorno = 0;
+            }
+            else
+            {
+                    printf("\n%s\n\n",textoError);
+                    retorno = 1;
+                    break;
+            }
+        }
+    }
+    else
+    {
+        printf("\n%s\n\n",textoError);
+        retorno = 1;
+    }
+
+
+    return retorno;
+}
+
+/** \brief Valida NUMERICO INT.
+ *
+ * \param num int* Mediante puntero paso INT.
+ * \param modo int* [0] = MAXIMO MINIMO ACTIVADO [1] = SIN IMPORTAR MAX/MIN.
+ * \return int retorno [0] si se cargo el NUM con exito. [1] = ERROR.
+ *
+ */
+
+
+int isValidInt(char* num,int minNum,int maxNum,char* textoInstruccion,char* textoError, int limite, int modo)
+{
+    int auxNum,i,verificacion,retorno=1;
+    if(strlen(num)>0)
+    {
+        for(i=0;i<strlen(num);i++)
+        {
+            if(((num[i]>='0') && (num[i]<='9')) || (num[i]=='.'))
+            {
+                verificacion = 0;
+            }
+            else
+            {
+                printf("\n%s\n\n",textoError);
+                verificacion = 1;
+                break;
+            }
+        }
+    }
+    else
+    {
+        printf("\n%s\n\n",textoError);
+            verificacion = 1;
+    }
+    if(!verificacion)
+    {
+        auxNum = atoi(num);
+        if(((auxNum >= minNum && auxNum <= maxNum) && !modo) || (modo==1))
+        {
+            retorno=0;
+        }
+    }
+
+    return retorno;
+
+}
+
 /** \brief Valida NUMERICO INT.
  *
  * \param num int* Mediante puntero paso INT.
@@ -235,7 +355,7 @@ int getNumericoInt(int* num,int minNum,int maxNum,char* textoInstruccion,char* t
         if(((auxNum >= minNum && auxNum <= maxNum) && !modo) || (modo==1))
         {
             *num = auxNum;
-            printf("\nENTRO IGUAL MODO = %d\n\n",modo);
+            //printf("\nENTRO IGUAL MODO = %d\n\n",modo);
             retorno=0;
         }
     }
@@ -293,6 +413,51 @@ int getNumericoFloat(float* num,int minNum,int maxNum,char* textoInstruccion,cha
         if(((auxNum >= minNum && auxNum <= maxNum) && !modo) || (modo==1))
         {
             *num = auxNum;
+            retorno=0;
+        }
+    }
+
+    return retorno;
+}
+
+/** \brief Valida NUMERICO FLOAT.
+ *
+ * \param num float* Mediante puntero paso FLOAT.
+ * \param modo int* [0] = MAXIMO MINIMO ACTIVADO [1] = SIN IMPORTAR MAX/MIN.
+ * \return int retorno [0] si se cargo el TEXTO con exito. [1] = ERROR.
+ *
+ */
+
+
+int isValidFloat(char* num,int minNum,int maxNum,char* textoInstruccion,char* textoError,int modo)
+{
+    int auxNum,i,verificacion,retorno=1;
+    if(strlen(num)>0)
+    {
+        for(i=0;i<strlen(num);i++)
+        {
+            if(((num[i]>='0') && (num[i]<='9')) || (num[i]=='.'))
+            {
+                verificacion = 0;
+            }
+            else
+            {
+                printf("\n%s\n\n",textoError);
+                verificacion = 1;
+                break;
+            }
+        }
+    }
+    else
+    {
+        printf("\n%s\n\n",textoError);
+        verificacion = 1;
+    }
+    if(!verificacion)
+    {
+        auxNum = atof(num);
+        if(((auxNum >= minNum && auxNum <= maxNum) && !modo) || (modo==1))
+        {
             retorno=0;
         }
     }
