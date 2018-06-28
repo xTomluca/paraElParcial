@@ -106,7 +106,7 @@ int al_deleteArrayList(ArrayList* this)
 
     if(this != NULL)
     {
-        //free(this->pElements);
+        free(this->pElements);
         free(this);
         returnAux=0;
     }
@@ -209,7 +209,7 @@ int al_set(ArrayList* this, int index,void* pElement)
 int al_remove(ArrayList* this,int index)
 {
     int returnAux = -1;
-    if( this != NULL && (index < al_len(this) && index >= 0))
+    if( this != NULL && (index <= al_len(this) && index >= 0))
     {
         if(!contract(this,index))
         {

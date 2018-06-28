@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1529628892 source:/home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/ArrayList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529617622 /home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/ArrayList.h
+
+1529630512 source:/home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/Empleado.c
+	"Empleado.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1529630543 /home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/Empleado.h
+
+1529623374 source:/home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/Parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Empleado.h"
+
+1529630492 source:/home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+	"Parser.h"
+
+1529543258 /home/alumno/ArrayList_2018/ElTooooomi/EjercicioPre2doParcialV2/Parser.h
+	"ArrayList.h"
+
+1529860472 source:c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529860462 c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\arraylist.h
+
+1529630582 source:c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\empleado.c
+	"Empleado.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1529630582 c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\empleado.h
+
+1529860406 source:c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"ArrayList.h"
+	"Parser.h"
+
+1529630582 c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\parser.h
+	"ArrayList.h"
+
+1529630582 source:c:\users\tomas\desktop\arraylist_2018-master\eltooooomi\ejerciciopre2doparcialv2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Empleado.h"
+
